@@ -1,0 +1,34 @@
+laberinto
+
+
+Genera un laberinto para un mini juego de Zelda en formato de array bidimensional de 10x10. Usa los siguientes símbolos:
+
+'P' para el jugador (solo uno)
+'K' para la llave (solo una)
+'E' para la salida (solo una)
+'M' para los monstruos (2 o 3)
+'#' para las paredes del laberinto
+' ' (espacio) para los caminos
+
+Reglas:
+1. El jugador, la llave y la salida deben estar en diferentes posiciones y ser accesibles.
+2. Debe haber un camino posible entre el jugador, la llave y la salida.
+3. Los monstruos no deben bloquear completamente el camino.
+4. Usa entre 2 y 3 monstruos.
+5. Crea un laberinto con múltiples caminos, pero asegúrate de que haya al menos una ruta para completar el juego.
+6. Las paredes exteriores del laberinto deben ser continuas, excepto por la salida.
+
+Devuelve solo el código JavaScript del array, sin explicaciones adicionales. Ejemplo del formato esperado:
+
+[
+  ['#','#','#','#','#','#','#','#','#','#'],
+  ['P',' ','#',' ',' ',' ','#','K','#','#'],
+  ['#',' ','#',' ','#',' ','#',' ','M','#'],
+  ['#',' ',' ',' ','#',' ',' ',' ','#','#'],
+  ['#','#','#',' ','#','#','#',' ',' ','#'],
+  ['#',' ','M',' ',' ',' ','#','#',' ','#'],
+  ['#','#','#','#','#',' ',' ',' ',' ','#'],
+  ['#',' ',' ',' ','#','#','#','#',' ','#'],
+  ['#','#','#',' ',' ',' ','M',' ',' ','E'],
+  ['#','#','#','#','#','#','#','#','#','#']
+]
