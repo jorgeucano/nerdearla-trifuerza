@@ -1,0 +1,69 @@
+<div class="game-container">
+    <h1>Mini Zelda Laberinto</h1>
+      
+    <!-- @if(user) { -->
+      <div class="maze"  [class.fight]="showFight">
+        @for (row of maze; track $index) {
+          <div class="row">
+            @for (cell of row; track $index) {
+              <div class="cell">
+                {{ getCellContent(cell) }}
+              </div>
+            }
+          </div>
+        }
+      </div>
+  
+      <div class="controls">
+        <button (click)="move('up')">↑</button>
+        <button (click)="move('left')">←</button>
+        <button (click)="move('right')">→</button>
+        <button (click)="move('down')">↓</button>
+      </div>
+  
+      <div class="status">
+        <p>{{ statusMessage }}</p>
+        <p>Pasos: {{ stepCount }}</p>
+        <p>{{ user?.email }} </p>
+      </div>
+  
+      <button (click)="startNewGame()">Nuevo Juego</button>
+      <button (click)="addScore()">Anotar mi Score</button>    
+    <!-- } @else {
+      <button (click)="createUser()">Create user</button>
+      <button (click)="loginUserPassword()">Login user</button>
+      <button (click)="loginWithGoogle()">login With Google</button>
+    } -->
+  </div>
+  
+  
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Players</th>
+        <th>Play</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(game of mazes; track $index){
+        <tr>
+          <td>{{ game.id }}</td>
+          <td>{{ game.email }}</td>
+          <td>
+            <ul>
+              @for(player of game.players; track $index) {
+                <li>
+                  {{ player.email }} - {{ player.stepsToWin }} steps
+                </li>
+              }
+            </ul>
+          </td>
+          <td>
+            <button (click)="playMaze(game)">Play</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table> -->

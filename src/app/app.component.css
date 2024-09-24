@@ -1,0 +1,102 @@
+.game-container {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .maze {
+    display: inline-block;
+    border: 2px solid #000;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    font-size: 20px;
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+  
+  .status {
+    margin-top: 20px;
+  }
+
+
+  .fight {
+    animation: hit 0.3s ease-in-out; /* Ajusta la duración y la función de tiempo según tus preferencias */
+  }
+  
+  @keyframes hit {
+    0% {
+      transform: rotate(0deg); /* Estado inicial */
+    }
+    25% {
+      transform: rotate(-10deg); /* Giro hacia un lado */
+    }
+    50% {
+      transform: rotate(15deg); /* Giro hacia el otro lado */
+    }
+    75% {
+      transform: rotate(-5deg); /* Pequeño rebote */
+    }
+    100% {
+      transform: rotate(0deg); /* Vuelta al estado inicial */
+    }
+  }
+
+
+
+
+
+  /* Estilos generales de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Encabezado de la tabla */
+th {
+  background-color: #f0f0f0;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Filas de la tabla */
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Rayas de cebra */
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Formato del laberinto */
+pre {
+  font-family: monospace; /* Fuente monoespaciada para mejor visualización */
+  white-space: pre-wrap; /* Permite que el laberinto se ajuste al ancho de la columna */
+}
+
+/* Lista de jugadores */
+ul {
+  list-style: none;
+  padding: 0;
+}
